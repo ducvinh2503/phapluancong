@@ -5,46 +5,49 @@
 </head>
 <body>
  
-
     <h2>Mẹ Tập Pháp Luân công</h2>
     <h3>Bài 1</h3>
-
-    
     <audio controls>
         <source src="exercise_01.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <h3>Bài 2</h3>
 
-    
-    <audio controls>
-        <source src="exercise_02.mp3" type="audio/mpeg">
+    <h3>Bài 2</h3>
+    <audio id="audio-2a" controls>
+        <source src="exercise_02a.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <h3>Bài 3</h3>
 
-    
+    <audio id="audio-2b" controls>
+        <source src="exercise_02b.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h3>Bài 3</h3>
     <audio controls>
         <source src="exercise_03.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <h3>Bài 4</h3>
 
-    
+    <h3>Bài 4</h3>
     <audio controls>
         <source src="exercise_04.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <h3>Bài 5</h3>
 
-    
+    <h3>Bài 5</h3>
     <audio controls>
         <source src="exercise_05.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
+    <script>
+        const audio2a = document.getElementById('audio-2a');
+        const audio2b = document.getElementById('audio-2b');
 
-    
-
+        audio2a.addEventListener('ended', function() {
+            audio2b.play();
+        });
+    </script>
 </body>
 </html>
