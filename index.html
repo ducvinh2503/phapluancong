@@ -36,17 +36,67 @@
     </audio>
 
     <h3>Bài 5</h3>
-    <audio controls>
-        <source src="exercise_05.mp3" type="audio/mpeg">
+    <audio id="audio-5a" controls>
+        <source src="exercise_05a.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="audio-5b" controls>
+        <source src="exercise_05b.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="audio-5c" controls>
+        <source src="exercise_05c.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="audio-5d" controls>
+        <source src="exercise_05d.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="audio-5e" controls>
+        <source src="exercise_05e.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="audio-5f" style="display: none;">
+        <source src="exercise_05f.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
     <script>
+        // 2a to 2b chain
         const audio2a = document.getElementById('audio-2a');
         const audio2b = document.getElementById('audio-2b');
 
         audio2a.addEventListener('ended', function() {
             audio2b.play();
+        });
+
+        // 5 chain (5a -> 5b -> 5c -> 5d -> 5e -> 5f)
+        const audio5a = document.getElementById('audio-5a');
+        const audio5b = document.getElementById('audio-5b');
+        const audio5c = document.getElementById('audio-5c');
+        const audio5d = document.getElementById('audio-5d');
+        const audio5e = document.getElementById('audio-5e');
+        const audio5f = document.getElementById('audio-5f');
+
+        audio5a.addEventListener('ended', function() {
+            audio5b.play();
+        });
+
+        audio5b.addEventListener('ended', function() {
+            audio5c.play();
+        });
+
+        audio5c.addEventListener('ended', function() {
+            audio5d.play();
+        });
+
+        audio5d.addEventListener('ended', function() {
+            audio5e.play();
+        });
+
+        audio5e.addEventListener('ended', function() {
+            audio5f.play();
         });
     </script>
 </body>
